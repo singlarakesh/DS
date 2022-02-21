@@ -1,0 +1,22 @@
+package HacherBlocks;
+
+import java.util.Scanner;
+
+public class MinMoneyNeeded {
+	public static void main(String[] args) {
+		Scanner scr = new Scanner(System.in);
+		int f = scr.nextInt();
+		int w = scr.nextInt();
+		int bagw[] = new int[w];
+		for (int i = 0; i < bagw.length; i++) {
+			bagw[i] = scr.nextInt();
+		}
+		calcMinMoneyNeeded(bagw, w);
+	}
+
+	private static void calcMinMoneyNeeded(int[] bagw, int w) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

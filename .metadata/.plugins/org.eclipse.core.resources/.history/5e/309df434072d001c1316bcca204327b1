@@ -1,0 +1,7 @@
+import java.util.Scanner;
+
+public class LongestPalindromicSubString {
+	public static void main(String[] args) {
+      Scanner scr=new Scanner(System.in);
+	}
+}

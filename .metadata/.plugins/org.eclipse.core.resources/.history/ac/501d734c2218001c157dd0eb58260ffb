@@ -1,0 +1,13 @@
+package LinkedList;
+
+public class PracticeLL {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public static class LL_List {
+	}
+
+}

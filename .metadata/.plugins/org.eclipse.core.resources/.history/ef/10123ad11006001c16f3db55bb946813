@@ -1,0 +1,16 @@
+package String;
+
+import java.util.Scanner;
+
+public class UncommonWords {
+	public static void main(String[] args) {
+		Scanner scr = new Scanner(System.in);
+		String s1 = scr.nextLine();
+		String s2 = scr.nextLine();
+		char[] a1 = s1.toCharArray();
+		char[] a2 = s2.toCharArray();
+		int i = 0, j = 0;
+		for (; i < a1.length && j < a2.length; i++, j++) {
+		}
+	}
+}

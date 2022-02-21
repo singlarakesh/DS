@@ -1,0 +1,15 @@
+package Sorting;
+
+public class InsertionSort {
+	public static void main(String[] args) {
+		 int arr[] = {64, 34, 25, 12, 22, 11, 90};
+		 insertionSort(arr,arr.length);
+		 for(int i:arr)
+			 System.out.println(i); 
+	}
+
+	private static void insertionSort(int[] arr, int length) {
+		// TODO Auto-generated method stub
+		
+	}
+}

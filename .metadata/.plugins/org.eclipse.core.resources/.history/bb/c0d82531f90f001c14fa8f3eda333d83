@@ -1,0 +1,7 @@
+package HacherBlocks;
+
+public class EqualizeString {
+	public static void main(String[] args) {
+
+	}
+}

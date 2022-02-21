@@ -1,0 +1,9 @@
+
+public class Maximum_Rectangle_01 {
+	public static void main(String[] args) {
+
+	}
+    public int maximalRectangle(int[][] matrix) {
+        
+    }
+}

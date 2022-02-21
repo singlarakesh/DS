@@ -1,0 +1,8 @@
+package Amazon;
+
+public class Top_K_Freq_El {
+	public static void main(String[] args) {
+		int nums[] = { 1, 1, 1, 2, 2, 3 };
+		int k = 2;
+	}
+}

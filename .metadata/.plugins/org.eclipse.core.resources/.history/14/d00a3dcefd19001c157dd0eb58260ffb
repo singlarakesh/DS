@@ -1,0 +1,46 @@
+package LeetCode;
+
+public class FindMinEleIndex {
+	public static void main(String[] args) {
+		int nums[] = { 4, 5, 6, 7, 0, 1, 2 };
+		int target = 7;
+		int lind = findMinIndex(nums);
+		int ind = binarySearch(nums, 0, lind - 1,target);
+		int ind1 = binarySearch(nums, lind, nums.length,target);
+		System.out.println(ind);
+		System.out.println(ind1);
+	}
+
+	private static int binarySearch(int[] nums, int lb, int ub,int target) {
+		// TODO Auto-generated method stub
+		while (lb <= ub) {
+			int mid = (lb + ub) / 2;
+			if (nums[mid] == target) {
+				return mid;
+			} else if (nums[mid] > target) {
+				ub = mid - 1;
+			} else {
+				lb = mid + 1;
+			}
+		}
+		return -1;
+	}
+
+	private static int findMinIndex(int[] nums) {
+		int lb = 0;
+		int ub = nums.length - 1;
+		while (lb <= ub) {
+			int mid = (lb + ub) / 2;
+			int next = (mid + 1) % nums.length;
+			int prev = (mid + nums.length - 1) % nums.length;
+			if (prev >= nums[mid] && next >= nums[mid])
+				return mid;
+			else if (nums[lb] < nums[mid]) {
+				lb = mid + 1;
+			} else {
+				ub = mid;
+			}
+		}
+		return -1;
+	}
+}

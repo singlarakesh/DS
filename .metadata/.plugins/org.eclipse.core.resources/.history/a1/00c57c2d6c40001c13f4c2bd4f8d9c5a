@@ -1,0 +1,20 @@
+package Graph;
+
+public class IslandInGraph {
+	public static void main(String[] args) {
+		int mat[][] = { { 1, 1, 0, 0, 0 }, { 0, 1, 0, 0, 1 }, { 1, 0, 0, 1, 1 }, { 0, 0, 0, 0, 0 }, { 1, 0, 1, 0, 1 } };
+
+		System.out.print(countIslands(mat));
+	}
+
+	private static int countIslands(int[][] mat) {
+		// TODO Auto-generated method stub
+		int count = 0;
+		boolean vist[][] = new boolean[][];
+		for (int i = 0; i < mat.length; i++) {
+			for (int j = 0; j < mat[0].length; j++) {
+			}
+		}
+		return count;
+	}
+}

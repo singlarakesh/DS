@@ -1,0 +1,16 @@
+
+public class Tree {
+	private TreeNode root;
+
+	public void intsert(int val) {
+		if (root == null) {
+			root = new TreeNode(val);
+		} else {
+			root.insert(val);
+		}
+	}
+
+	public static void main(String[] args) {
+
+	}
+}

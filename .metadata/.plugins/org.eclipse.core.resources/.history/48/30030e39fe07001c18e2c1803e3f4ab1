@@ -1,0 +1,15 @@
+package String;
+
+import java.util.Scanner;
+
+public class SlidingWindowMax {
+	public static void main(String[] args) {
+		Scanner scr = new Scanner(System.in);
+		int n = scr.nextInt();
+		int a[] = new int[n];
+		for (int i = 0; i < n; i++) {
+			a[i] = scr.nextInt();
+		}
+	slidingWindowMax(a);
+	}
+}

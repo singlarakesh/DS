@@ -1,0 +1,30 @@
+
+public class Tree {
+	private TreeNode root;
+
+	public void intsert(int val) {
+		if (root == null) {
+			root = new TreeNode(val);
+		} else {
+			root.insert(val);
+		}
+	}
+
+	public static void main(String[] args) {
+		Tree tree = new Tree();
+		tree.intsert(25);
+		tree.intsert(20);
+		tree.intsert(15);
+		tree.intsert(27);
+		tree.intsert(30);
+		tree.intsert(29);
+		tree.intsert(26);
+		tree.intsert(22);
+		tree.intsert(32);
+		tree.travelsalInorder();
+	}
+
+	private void travelsalInorder() {
+		root.travelsalInorder();
+	}
+}

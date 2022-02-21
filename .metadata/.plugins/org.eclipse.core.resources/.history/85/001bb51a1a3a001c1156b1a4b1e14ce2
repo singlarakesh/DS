@@ -1,0 +1,47 @@
+package Amazon;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.PriorityQueue;
+import java.util.Queue;
+
+class Nodev {
+	char ch;
+	int count;
+
+	Nodev(char ch, int count) {
+		this.ch = ch;
+		this.count = count;
+	}
+}
+
+public class ReaarangeCharInStringNoadjacent {
+	public static void main(String[] args) {
+		String str = "bbbaa";
+		rearrangeString(str);
+	}
+
+	private static void rearrangeString(String str) {
+		// TODO Auto-generated method stub
+		int k = str.length() - 1;
+		Map<Character, Integer> map = new HashMap<>();
+		while (k >= 0) {
+			char c = str.charAt(k);
+			if (map.containsKey(c)) {
+				map.put(c, map.get(c) + 1);
+			} else {
+				map.put(c, 1);
+			}
+		}
+		Queue<Nodev> q = new PriorityQueue<>();
+		for (char c : map.keySet()) {
+			Nodev node = new Nodev(c, map.get(c));
+			q.add(node);
+		}
+		String s="";
+		while (!q.isEmpty()) {
+			Nodev node =q.poll();
+			s+=node.ch;
+		}
+	}
+}

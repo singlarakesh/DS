@@ -1,0 +1,67 @@
+package com.howtodoinjava.employees.controllers;
+
+import org.hamcrest.Matchers;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.MediaType;
+import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
+import org.springframework.test.web.servlet.result.MockMvcResultHandlers;
+import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
+
+import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
+
+
+/*
+{
+        "firstName":"Gourav",
+        "latsName":"Goyal"
+}
+*/
+@SpringBootTest
+@AutoConfigureMockMvc
+public class IntegrationTest {
+
+    @Autowired
+    private MockMvc mockMvc;
+
+    @Test
+    public void testCreateReadDelete() throws Exception {
+
+        //create
+        mockMvc.perform(MockMvcRequestBuilders.post("/employee")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content("{\n" +
+                        "        \"firstName\":\"Gourav\",\n" +
+                        "        \"lastName\":\"Goyal\"\n" +
+                        "}"))
+                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andDo(MockMvcResultHandlers.print())
+                .andExpect(MockMvcResultMatchers.jsonPath("$.id", Matchers.is(1)))
+                .andExpect(MockMvcResultMatchers.jsonPath("$.firstName", Matchers.is("Gourav")))
+                .andExpect(MockMvcResultMatchers.jsonPath("$.lastName", Matchers.is("Goyal")));
+//
+//        //read
+//        mockMvc.perform(MockMvcRequestBuilders.get("/employee"))
+//                .andExpect(MockMvcResultMatchers.status().isOk())
+//                .andDo(MockMvcResultHandlers.print())
+//                .andExpect(MockMvcResultMatchers.jsonPath("$", Matchers.hasSize(1)))
+//                .andExpect(MockMvcResultMatchers.jsonPath("$[0].firstName", Matchers.is("Gourav")));
+//
+//        //delete
+//        mockMvc.perform(MockMvcRequestBuilders.delete("/employee/{id}", 1))
+//                .andExpect(MockMvcResultMatchers.status().isOk())
+//                .andDo(MockMvcResultHandlers.print());
+//
+//        //read
+//        mockMvc.perform(MockMvcRequestBuilders.get("/employee"))
+//                .andExpect(MockMvcResultMatchers.status().isOk())
+//                .andDo(MockMvcResultHandlers.print())
+//                .andExpect(MockMvcResultMatchers.jsonPath("$", Matchers.hasSize(0)));
+
+    }
+
+
+}

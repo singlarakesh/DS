@@ -1,0 +1,27 @@
+package slidingWindow;
+
+public class MinSizeSubarraySum {
+	public static void main(String[] args) {
+		int target = 7;
+		int nums[] = { 2, 3, 1, 2, 4, 3 };
+		minSize(nums, target);
+	}
+
+	private static void minSize(int[] nums, int target) {
+		// TODO Auto-generated method stub
+		int i = 0;
+		int j = 0;
+		int cal = 0;
+		int ans = Integer.MAX_VALUE;
+		while (j < nums.length) {
+			cal += nums[j];
+			if (cal < target) {
+				j++;
+			} else if (cal == target) {
+				int s = j - i + 1;
+				ans = ans > cal ? cal : ans;
+				j++;
+			}
+		}
+	}
+}

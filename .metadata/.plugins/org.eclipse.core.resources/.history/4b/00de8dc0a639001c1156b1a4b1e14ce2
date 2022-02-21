@@ -1,0 +1,23 @@
+
+public class ArraysBasic {
+	public static void main(String[] args) {
+		int[][] ar = { { 1, 0, 0 }, { 1, 0, 0 }, { 1, 9, 1 } };
+		demolitionRobot(ar, 0, 0, ar.length-1, ar[0].length-1, "");
+	}
+
+	private static int demolitionRobot(int[][] ar, int sr, int sc, int er, int ec, String ans) {
+		// TODO Auto-generated method stub
+		if (sr == er && sc == ec) {
+			System.out.println(ans);
+			return 0;
+		}
+		if (sr > er || sc >= ec)
+			return 0;
+		if (ar[sr][sc] == 0) {
+			return 0;
+		}
+		demolitionRobot(ar, sr + 1, sc, er, ec, ans + "V");
+		demolitionRobot(ar, sr, sc + 1, er, ec, ans + "H");
+		return 0;
+	}
+}

@@ -1,0 +1,7 @@
+package HacherBlocks;
+
+public class MinMoneyNeeded {
+	public static void main(String[] args) {
+
+	}
+}

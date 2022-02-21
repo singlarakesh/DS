@@ -1,0 +1,23 @@
+package LeetCode;
+
+public class FindMinEleIndex {
+	public static void main(String[] args) {
+		int nums[] = { 54, 5, 6, 7, 0, 1, 2 };
+		findMinIndex(nums);
+	}
+
+	private static int findMinIndex(int[] nums) {
+		int lb = 0;
+		int ub = nums.length - 1;
+		while (lb <= ub) {
+			int mid = (lb + ub) / 2;
+			if(nums[mid-1]>nums[mid] && nums[mid+1]>nums[mid])
+				return mid;
+			else if(nums[mid-1]>nums[mid] && nums[mid+1]<nums[mid]) {
+				lb=mid+1;
+			}else {
+				ub=mid-1;
+			}
+		}
+	}
+}

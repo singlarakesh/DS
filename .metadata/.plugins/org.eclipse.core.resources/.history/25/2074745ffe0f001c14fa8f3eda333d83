@@ -1,0 +1,35 @@
+package HacherBlocks;
+
+import java.util.Scanner;
+import java.util.Stack;
+
+//Longest Increasing Subsequence
+public class LIS {
+	public static void main(String[] args) {
+		Scanner scr = new Scanner(System.in);
+		int n = scr.nextInt();
+		int a[] = new int[n];
+		for (int i = 0; i < n; i++) {
+			a[i] = scr.nextInt();
+		}
+		Stack<Integer> s = new Stack<Integer>();
+		increasingSubs(a, s, 0);
+	}
+
+	private static void increasingSubs(int[] a, Stack<Integer> s, int i) {
+
+		if (!s.isEmpty()) {
+			if (s.peek() < a[i]) {
+				s.push(a[i]);
+				increasingSubs(a, s, i++);
+			}else {
+				s.push(a[i]);
+			}
+		} else {
+			increasingSubs(a, s, i++);
+			s.push(a[i]);
+			increasingSubs(a, s, i++);
+		}
+
+	}
+}

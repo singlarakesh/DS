@@ -1,0 +1,7 @@
+package String;
+
+public class UncommonWords {
+	public static void main(String[] args) {
+
+	}
+}

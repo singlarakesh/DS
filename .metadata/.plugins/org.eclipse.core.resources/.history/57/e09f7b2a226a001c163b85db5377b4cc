@@ -1,0 +1,27 @@
+package LeetCode;
+
+public class MaxProfitSwiggy1235 {
+	public static void main(String[] args) {
+		int startTime[] = { 1, 2, 3, 3 };
+		int endTime[] = { 3, 4, 5, 6 };
+		int profit[] = { 50, 10, 40, 70 };
+		System.out.println(jobScheduling(startTime, endTime, profit, 0, 0, 0));
+		;
+	}
+
+	private static int jobScheduling(int[] startTime, int[] endTime, int[] profit, int start, int i, int ans) {
+		// TODO Auto-generated method stub
+		if (i >= startTime.length) {
+//			System.out.println(ans);
+			return 0;
+		}
+		System.out.println(ans);
+		if (startTime[i] >= start) {
+			return Math.max(jobScheduling(startTime, endTime, profit, endTime[i], i + 1, ans + profit[i]) + profit[i],
+					jobScheduling(startTime, endTime, profit, start, i + 1, ans));
+		} else {
+			return jobScheduling(startTime, endTime, profit, start, i + 1, ans);
+		}
+
+	}
+}

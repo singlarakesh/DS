@@ -1,0 +1,7 @@
+package LeetCode;
+
+public class FindSecondLargestEle {
+	public static void main(String[] args) {
+      findSecondLargest();
+	}
+}

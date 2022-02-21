@@ -1,0 +1,8 @@
+package LeetCode;
+
+public class FindMinEleIndex {
+	public static void main(String[] args) {
+		int nums[] = { 54, 5, 6, 7, 0, 1, 2 };
+		findMinIndex(nums);
+	}
+}

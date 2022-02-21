@@ -1,0 +1,6 @@
+package LeetCode;
+
+public class Most_Profit_Assigning_Work_826 {
+	public static void main(String[] args) {
+	}
+}

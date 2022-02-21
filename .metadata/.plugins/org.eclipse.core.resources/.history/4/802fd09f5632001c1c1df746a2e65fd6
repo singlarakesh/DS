@@ -1,0 +1,13 @@
+package Java8;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class Test {
+	public static void main(String[] args) {
+		List<Integer> ar=new ArrayList<Integer>();
+		Collections.sort(ar);
+       
+	}
+}

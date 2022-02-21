@@ -1,0 +1,50 @@
+package Amazon;
+
+import java.util.Comparator;
+import java.util.PriorityQueue;
+import java.util.Queue;
+
+class Node implements Comparator<Node> {
+	int dist;
+	int[] pt;
+
+	Node() {
+	}
+
+	Node(int dist, int[] pt) {
+		this.dist = dist;
+		this.pt = pt;
+	}
+
+	@Override
+	public int compare(Node o1, Node o2) {
+		// TODO Auto-generated method stub
+		return o1.dist - o2.dist;
+	}
+	
+}
+
+public class kClosest {
+	public static void main(String[] args) {
+		int[][] ar = { { 1, 3 }, { -2, 2 } };
+		kclosest(ar, 1);
+	}
+
+	private static void kclosest(int[][] ar, int k) {
+		// TODO Auto-generated method stub
+		Queue<Node> q = new PriorityQueue<>(new Node());
+		for (int l = 0; l < ar.length; l++) {
+
+			int i = ar[l][0];
+			int j = ar[l][1];
+			int s = i * i + j * j;
+			Node nn = new Node(s, ar[l]);
+			q.add(nn);
+		}
+	    int[][] res = new int[k][2];
+	    while (k > 0) {
+	        res[--k] = q.poll().pt;
+	    }
+
+	}
+}

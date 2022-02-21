@@ -1,0 +1,8 @@
+package Caching;
+
+import java.util.HashMap;
+
+public class Cache<K, V> {
+	private HashMap<K, V> map;
+	private CacheItem first, last;
+}

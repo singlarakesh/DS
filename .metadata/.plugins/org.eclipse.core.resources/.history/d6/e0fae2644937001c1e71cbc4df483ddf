@@ -1,0 +1,5 @@
+package dp;
+
+public interface hello extends A{
+	 int hss = 10;
+}

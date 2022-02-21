@@ -1,0 +1,10 @@
+package LeetCode;
+
+public class MaxCakeBite {
+	public static void main(String[] args) {
+     int h=5;
+     int w=4;
+     int[] horizontalCuts= {1,2,4};
+     int[] verticalCuts= {1,3};
+	}
+}

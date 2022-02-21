@@ -1,0 +1,13 @@
+package Graph;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class KeysAndRooms {
+	public static void main(String[] args) {
+     List<List<Integer>> list=new ArrayList<List<Integer>>();
+	}
+    public boolean canVisitAllRooms(List<List<Integer>> rooms) {
+		return false;      
+    }
+}

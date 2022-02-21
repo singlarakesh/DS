@@ -1,0 +1,10 @@
+package LeetCode;
+
+public class PairOfSongs_1010 {
+	public static void main(String[] args) {
+		int time[] = { 30, 20, 150, 100, 4 };
+	}
+    public static int numPairsDivisibleBy60(int[] time) {
+        
+    }
+}

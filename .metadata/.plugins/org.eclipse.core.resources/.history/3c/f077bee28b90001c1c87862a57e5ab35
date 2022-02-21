@@ -1,0 +1,14 @@
+package Pubmatic;
+
+import java.util.LinkedList;
+
+public class Main {
+	public static String EOF = "EOF";
+
+	public static void main(String[] args) {
+		LinkedList<String> buffer = new LinkedList<String>();
+		Thread proThread=new Thread(new Producer(buffer));
+		Thread coThread=new Thread(new Consumer(buffer));
+		Thread coThread=new Thread(new Consumer(buffer));
+	}
+}

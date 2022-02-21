@@ -1,0 +1,14 @@
+package Paytm;
+
+public class Combination_Sum {
+	public static void main(String[] args) {
+		int candidates[] = { 2, 3, 6, 7 };
+		int target=7;
+		combinationSum(candidates,target);
+	}
+
+	private static void combinationSum(int[] candidates, int target) {
+		// TODO Auto-generated method stub
+		
+	}
+}

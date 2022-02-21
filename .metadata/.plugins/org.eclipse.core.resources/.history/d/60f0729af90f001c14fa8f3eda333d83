@@ -1,0 +1,17 @@
+package HacherBlocks;
+
+import java.util.Scanner;
+
+public class EqualizeString {
+	public static void main(String[] args) {
+		Scanner scr = new Scanner(System.in);
+		String s1 = scr.next();
+		String s2 = scr.next();
+		equalizeString(s1, s2);
+	}
+
+	private static void equalizeString(String s1, String s2) {
+		// TODO Auto-generated method stub
+		
+	}
+}

@@ -1,0 +1,13 @@
+
+
+public class ArraysBasic {
+	public static void main(String[] args) {
+		int[][] ar = { { 1, 0, 0 }, { 1, 0, 0 }, { 1, 9, 1 } };
+		demolitionRobot(ar);
+	}
+
+	private static void demolitionRobot(int[][] ar) {
+		// TODO Auto-generated method stub
+		
+	}
+}

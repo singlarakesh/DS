@@ -1,0 +1,12 @@
+package HacherBlocks;
+
+public class JobForBounties {
+	public static void main(String[] args) {
+      String str="(()(()()";
+      int i=0;
+      int j=0;
+      for(;i<str.length()&&j<str.length();) {
+    	  
+      }
+	}
+}

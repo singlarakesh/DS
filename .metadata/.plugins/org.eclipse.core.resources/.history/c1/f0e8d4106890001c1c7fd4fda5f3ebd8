@@ -1,0 +1,13 @@
+package Pubmatic;
+
+class Test {
+	int x;
+	int y;
+}
+
+public class JavaStudy {
+	public static void main(String[] args) {
+      Test t=new Test();
+      Test obj=t;
+	}
+}

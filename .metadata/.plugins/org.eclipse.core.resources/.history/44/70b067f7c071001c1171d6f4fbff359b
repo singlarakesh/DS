@@ -1,0 +1,68 @@
+package Caching;
+
+import java.util.HashMap;
+
+/*
+ * Entry that contains complete data 
+ * we have hashmap to get put cache item in 0(1)
+ * We have doubly linked list to have LRU cache
+ * it will remove or addToTop Entry in o(1)*/
+
+class Entry {
+	int key;
+	int val;
+	Entry left;
+	Entry right;
+
+	public Entry(int key, int val, Entry left, Entry right) {
+		super();
+		this.key = key;
+		this.val = val;
+		this.left = left;
+		this.right = right;
+	}
+
+	public Entry() {
+		// TODO Auto-generated constructor stub
+	}
+}
+
+public class PractisingCache {
+	HashMap<Integer, Entry> map;
+	Entry start, end;
+	int LRU_SIZE = 4;
+
+	public PractisingCache() {
+		map = new HashMap<Integer, Entry>();
+	}
+
+	public Entry getCacheItem(int key) {
+		if (map.containsKey(key)) {
+			Entry entry = map.get(key);
+			removeNode(entry);
+			addToTop(entry);
+			return entry;
+		}
+		return new Entry();
+	}
+
+	private void addToTop(Entry entry) {
+		// TODO Auto-generated method stub
+
+	}
+
+	private void removeNode(Entry entry) {
+		// TODO Auto-generated method stub
+		if (entry.left != null) {
+			entry.left.right=entry.right;
+		} else {
+			end=entry.right;
+		}
+		if (entry.right != null) {
+			entry.right.left=entry.left;
+		} else {
+			start=entry.left;
+		}
+	}
+
+}

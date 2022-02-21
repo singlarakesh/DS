@@ -1,0 +1,16 @@
+package Caching;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public interface hello {
+ final public static int a=10;
+ private void getName() {
+	 
+ }
+ public static void main(String[] args) {
+	Set<Integer> s=new HashSet<>();
+	s.add(10);
+	s.remove(20);
+}
+}

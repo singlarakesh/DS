@@ -1,0 +1,26 @@
+class Node {
+	int val;
+	Node left;
+	Node right;
+
+	Node(int val) {
+		this.val = val;
+	}
+}
+
+public class LearningTree {
+	Node root;
+	public static void main(String[] args) {
+		LearningTree tree=new LearningTree();
+		tree.root = new Node(10);
+		tree.root.left = new Node(12);
+		tree.root.right = new Node(15);
+		tree.root.left.left = new Node(25);
+		tree.root.left.right = new Node(30);
+		tree.root.right.left = new Node(36);
+		findHt(tree.root);
+	}
+	private static void findHt(Node root) {
+		
+	}
+}

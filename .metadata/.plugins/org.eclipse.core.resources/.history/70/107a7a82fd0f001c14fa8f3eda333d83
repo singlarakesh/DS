@@ -1,0 +1,8 @@
+package HacherBlocks;
+
+//Longest Increasing Subsequence
+public class LIS {
+	public static void main(String[] args) {
+		Scanner scr = new Scanner(System.in);
+	}
+}

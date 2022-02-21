@@ -1,0 +1,11 @@
+package String;
+
+import java.util.Scanner;
+
+public class UncommonWords {
+	public static void main(String[] args) {
+	   Scanner scr = new Scanner(System.in);
+       String s1=scr.nextLine();
+       String s2=scr.nextLine()
+	}
+}

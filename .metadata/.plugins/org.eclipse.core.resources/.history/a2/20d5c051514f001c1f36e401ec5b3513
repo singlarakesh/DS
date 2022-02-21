@@ -1,0 +1,57 @@
+import java.util.HashMap;
+import java.util.Map;
+
+class CacheItem<K, V> {
+	private K key;
+	private V value;
+	private CacheItem prev, next;
+
+	public K getKey() {
+		return key;
+	}
+
+	public void setKey(K key) {
+		this.key = key;
+	}
+
+	public V getValue() {
+		return value;
+	}
+
+	public void setValue(V value) {
+		this.value = value;
+	}
+
+	public CacheItem getPrev() {
+		return prev;
+	}
+
+	public void setPrev(CacheItem prev) {
+		this.prev = prev;
+	}
+
+	public CacheItem getNext() {
+		return next;
+	}
+
+	public void setNext(CacheItem next) {
+		this.next = next;
+	}
+
+	public CacheItem(K key, V value) {
+		super();
+		this.key = key;
+		this.value = value;
+	}
+
+}
+
+public class Cache<K, V> {
+	private Map<K, CacheItem> map;
+	private CacheItem first, Last;
+	private final int CAPACITY;
+	public Cache(int capacity) {
+		this.CAPACITY=capacity;	
+		map=new HashMap<>(this.CAPACITY);
+	}
+}

@@ -1,0 +1,19 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class PascalTriangle {
+	public static void main(String[] args) {
+		Scanner scr=new Scanner(System.in);
+		int n=scr.nextInt();
+		List<List<Integer>> ans=new ArrayList<List<Integer>>();
+        findPascaltri(n,ans);
+        System.out.println(ans);
+	}
+
+	private static void findPascaltri(int n) {
+		// TODO Auto-generated method stub
+          
+	    
+	}
+}

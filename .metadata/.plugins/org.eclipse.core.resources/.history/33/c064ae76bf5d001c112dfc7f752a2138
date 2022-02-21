@@ -1,0 +1,8 @@
+package slidingWindow;
+
+public class SubArrayWithSum {
+	public static void main(String[] args) {
+		int ar[] = { 1, 4, 20, 3, 10, 5 };
+		int sum = 33;
+	}
+}

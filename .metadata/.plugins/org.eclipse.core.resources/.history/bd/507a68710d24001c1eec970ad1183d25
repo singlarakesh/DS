@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class PascalTriangle {
+	public static void main(String[] args) {
+		Scanner scr=new Scanner(System.in);
+		int n=scr.nextInt();
+        int ans=findPascaltri(n);
+        System.out.println(ans);
+	}
+
+	private static int findPascaltri(int n) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+}

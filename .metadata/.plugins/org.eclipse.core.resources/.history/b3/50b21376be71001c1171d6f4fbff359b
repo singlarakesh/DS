@@ -1,0 +1,12 @@
+package Caching;
+
+class Entry {
+	int key;
+	int val;
+	Entry left;
+	Entry right;
+}
+
+public class PractisingCache {
+
+}

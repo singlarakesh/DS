@@ -1,0 +1,34 @@
+package LinkedList;
+
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Scanner;
+
+public class DeleteFromLL {
+	public static void main(String[] args) throws Exception {
+		Scanner scr = new Scanner(System.in);
+		int n = scr.nextInt();
+		int tc = scr.nextInt();
+		List<Integer> list = new LinkedList<>();
+
+		for (int j = 0; j < n; j++) {
+			int num = scr.nextInt();
+			list.add(num);
+		}
+		System.out.println(list);
+		for (int i = 0; i < tc; i++) {
+			int m = scr.nextInt();
+
+			int item = list.remove(m);
+			System.out.println(list);
+
+		}
+
+	}
+	public static class Linked_List{
+		public static class Node{
+			int data;
+			Node next;
+		}
+	}
+}

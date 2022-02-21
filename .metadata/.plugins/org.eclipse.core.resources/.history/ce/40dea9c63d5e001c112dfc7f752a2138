@@ -1,0 +1,19 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class LocalMaxMin {
+	public static void main(String[] args) {
+		int ar[] = { 100, 180, 260, 310, 40, 535, 695 };
+		List<Integer> max = new ArrayList<>();
+		List<Integer> min = new ArrayList<>();
+		boolean maxvalid = false;
+		boolean minvalid = false;
+		if (ar[0] > ar[1]) {
+			max.add(0);
+			maxvalid=true;
+		} else {
+			max.add(0);
+			minvalid=true;
+		}
+	}
+}

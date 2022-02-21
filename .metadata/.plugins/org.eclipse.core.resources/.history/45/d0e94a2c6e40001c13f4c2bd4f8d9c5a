@@ -1,0 +1,43 @@
+package Graph;
+
+import java.util.LinkedList;
+import java.util.Queue;
+
+class Pair {
+	int x;
+	int y;
+}
+
+public class IslandInGraph {
+	public static void main(String[] args) {
+		int mat[][] = { { 1, 1, 0, 0, 0 }, { 0, 1, 0, 0, 1 }, { 1, 0, 0, 1, 1 }, { 0, 0, 0, 0, 0 }, { 1, 0, 1, 0, 1 } };
+
+		System.out.print(countIslands(mat));
+	}
+
+	private static int countIslands(int[][] mat) {
+		// TODO Auto-generated method stub
+		int count = 0;
+		boolean vist[][] = new boolean[mat.length][mat[0].length];
+		for (int i = 0; i < mat.length; i++) {
+			for (int j = 0; j < mat[0].length; j++) {
+				if (!vist[i][j] && mat[i][j] == 1) {
+					traverseItsIsland(mat, vist, i, j);
+					count++;
+				}
+			}
+		}
+		return count;
+	}
+
+	private static void traverseItsIsland(int[][] mat, boolean[][] vist, int r, int c) {
+		// TODO Auto-generated method stub
+
+		int row[] = { -1, -1, -1, 0, 0, 1, 1, 1 };
+		int col[] = { -1, 0, 1, -1, 1, -1, 0, 1 };
+		Queue<Pair> q = new LinkedList<Pair>();
+		for (int i = 0; i < 8; i++) {
+
+		}
+	}
+}

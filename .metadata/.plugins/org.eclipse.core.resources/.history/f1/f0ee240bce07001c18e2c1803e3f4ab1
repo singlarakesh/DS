@@ -1,0 +1,37 @@
+package String;
+
+import java.util.Scanner;
+import java.util.Stack;
+
+public class NextGreaterElement {
+	public static void main(String[] args) {
+		Scanner scr = new Scanner(System.in);
+		int n = scr.nextInt();
+		int a[] = new int[n];
+		for (int i = 0; i < n; i++) {
+			a[i]=scr.nextInt();
+		}
+		findNextGreater(a);
+	}
+
+	private static void findNextGreater(int[] a) {
+		// TODO Auto-generated method stub
+		Stack<Integer> s=new Stack<Integer>();
+		for(int i=0;i<a.length;i++) {
+			int el=a[i];
+			if(s.isEmpty())
+				s.push(el);
+			else {
+				while(!s.isEmpty()) {
+					if(s.peek()<el) {
+						int e=s.pop();
+						System.out.println(e+"--->"+el);
+					}else {
+						s.push(el);
+						break;
+					}
+				}
+			}
+		}
+	}
+}

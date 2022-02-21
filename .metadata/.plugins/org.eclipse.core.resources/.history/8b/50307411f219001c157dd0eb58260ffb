@@ -1,0 +1,13 @@
+package LeetCode;
+
+public class FirstAndLastPositionInArray {
+	public static void main(String[] args) {
+		int nums[] = { 5, 7, 7, 8, 8, 10 };
+		int target = 8;
+		int lb = 0;
+		int ub = nums.length - 1;
+		while (lb <= ub) {
+			int mid = (lb + ub) / 2;
+		}
+	}
+}

@@ -1,0 +1,8 @@
+package Amazon;
+
+public class ReaarangeCharInStringNoadjacent {
+	public static void main(String[] args) {
+		String str = "bbbaa";
+		rearrangeString(str);
+	}
+}

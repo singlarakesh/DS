@@ -1,0 +1,20 @@
+package Amazon;
+
+class Nodev {
+	char ch;
+	int count;
+
+	Nodev(char ch,int count){}
+}
+
+public class ReaarangeCharInStringNoadjacent {
+	public static void main(String[] args) {
+		String str = "bbbaa";
+		rearrangeString(str);
+	}
+
+	private static void rearrangeString(String str) {
+		// TODO Auto-generated method stub
+
+	}
+}

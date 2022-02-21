@@ -1,0 +1,46 @@
+package HacherBlocks;
+
+import java.util.Scanner;
+
+public class MinMoneyNeeded {
+	public static void main(String[] args) {
+		Scanner scr = new Scanner(System.in);
+		int f = scr.nextInt();
+		int w = scr.nextInt();
+		int bagw[] = new int[w];
+		for (int i = 0; i < bagw.length; i++) {
+			bagw[i] = scr.nextInt();
+		}
+		calcMinMoneyNeeded(bagw, w);
+	}
+
+	private static void calcMinMoneyNeeded(int[] bagw, int w) {
+		// TODO Auto-generated method stub
+		int wt[] = bagw;
+		int price[] = bagw;
+		int capacity = w;
+		int dp[][] = new int[wt.length + 1][capacity + 1];
+		for (int i = 0; i <= wt.length; i++) {
+			for (int j = 0; j <= capacity; j++) {
+				if (j == 0) {
+					dp[i][j] = 0;
+				} else if (i == 0) {
+					dp[i][j] = Integer.MAX_VALUE;
+				}else if (wt[i - 1] <= j) {
+					dp[i][j] = Math.min(dp[i - 1][j], price[i - 1] + dp[i][j - wt[i - 1]]);
+				} else {
+					dp[i][j] = dp[i - 1][j];
+				}
+
+			}
+		}
+		System.out.print(dp[wt.length-1][j-1]);
+//		for (int i = 0; i <= wt.length; i++) {
+//			for (int j = 0; j <= capacity; j++) {
+//				System.out.print(dp[i][j] + " ");
+//
+//			}
+//			System.out.println();
+//		}
+	}
+}

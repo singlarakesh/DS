@@ -1,0 +1,23 @@
+package LeetCode;
+
+public class HouseRobber {
+	public static void main(String[] args) {
+		int nums[] = { 1, 2, 3, 1 };
+		int capacity = 4;
+		int dp[]=new int[nums.length];
+		System.out.println(moneyToRob(nums, capacity, 0));
+	}
+
+	private static int moneyToRob(int[] nums, int capacity, int i) {
+		// TODO Auto-generated method stub
+		if (i >= nums.length || capacity == 0) {
+			return 0;
+		}
+
+		if (nums[i] <= capacity) {
+			return Math.max(moneyToRob(nums, capacity - nums[i], i + 2) + nums[i], moneyToRob(nums, capacity, i + 1));
+		} else {
+			return moneyToRob(nums, capacity, i + 1);
+		}
+	}
+}

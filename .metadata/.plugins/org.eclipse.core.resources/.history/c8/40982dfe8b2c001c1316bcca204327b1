@@ -1,0 +1,12 @@
+
+public class Max_Area_Histogram {
+	public static void main(String[] args) {
+		int hist[] = { 6, 2, 5, 4, 5, 1, 6 };
+		getMaxArea(hist, hist.length);
+	}
+
+	private static void getMaxArea(int[] hist, int length) {
+		// TODO Auto-generated method stub
+		
+	}
+}

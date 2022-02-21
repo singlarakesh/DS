@@ -1,0 +1,12 @@
+package com.example.demo.model;
+
+import javax.persistence.Entity;
+
+@Entity
+public class Expense {
+	
+	private Long id;
+	private String item;
+	private float amount;
+
+}

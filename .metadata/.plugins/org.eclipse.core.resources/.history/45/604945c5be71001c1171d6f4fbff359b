@@ -1,0 +1,19 @@
+package Caching;
+
+class Entry {
+	int key;
+	int val;
+	Entry left;
+	Entry right;
+	public Entry(int key, int val, Entry left, Entry right) {
+		super();
+		this.key = key;
+		this.val = val;
+		this.left = left;
+		this.right = right;
+	}
+}
+
+public class PractisingCache {
+
+}

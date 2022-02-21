@@ -1,0 +1,15 @@
+class Point{
+	int val;
+	int x;
+	int y;
+
+	public Point(int val, int x, int y) {
+		super();
+		this.val = val;
+		this.x = x;
+		this.y = y;
+	}
+}
+public class Verticle {
+
+}

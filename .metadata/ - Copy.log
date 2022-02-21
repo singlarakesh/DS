@@ -1,0 +1,28 @@
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-19 16:35:29.461
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.bkjnnWUm
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-19 16:35:29.469
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.bkjnnWUm
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-19 16:35:29.472
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-19 16:35:29.476
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.bkjnnWUm => OK
+
+!ENTRY org.eclipse.core.resources 4 568 2021-08-19 16:40:29.508
+!MESSAGE Could not write metadata for '/'.
+!STACK 0
+java.io.FileNotFoundException: C:\Users\parushasingla\Documents\workspace-spring-tool-suite-4-4.11.0.RELEASE\.metadata\.plugins\org.eclipse.core.resources\.root\.markers.snap (The system cannot find the path specified)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:291)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:234)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:155)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:48)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:44)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1765)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1202)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1143)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:55)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)

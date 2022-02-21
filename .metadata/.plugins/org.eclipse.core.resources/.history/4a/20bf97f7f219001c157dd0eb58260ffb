@@ -1,0 +1,22 @@
+package LeetCode;
+
+public class FirstAndLastPositionInArray {
+	public static void main(String[] args) {
+		int nums[] = { 5, 7, 7, 8, 8, 10 };
+		int target = 8;
+		int res[]=new int[2];
+		res[0]=findFirstOcc(nums,target);
+		res[1]=findLastOcc(nums,target);
+		}
+	}
+
+	private static int findLastOcc(int[] nums, int target) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	private static int findFirstOcc(int[] nums, int target) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+}

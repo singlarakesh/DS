@@ -1,0 +1,5 @@
+package dp;
+
+public abstract hello {
+	 int h;
+}

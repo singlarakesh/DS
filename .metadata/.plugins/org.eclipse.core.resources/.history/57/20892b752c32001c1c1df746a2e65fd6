@@ -1,0 +1,12 @@
+package Java8;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class StreamCode {
+
+	public static void main(String[] args) {
+		int ar[] = { 105, 20, 50, 5, 78 };
+	}
+
+}

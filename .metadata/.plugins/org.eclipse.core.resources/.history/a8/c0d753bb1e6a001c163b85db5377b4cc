@@ -1,0 +1,10 @@
+package LeetCode;
+
+public class MaxProfitSwiggy1235 {
+	public static void main(String[] args) {
+		int startTime[] = { 1, 2, 3, 3 };
+		int endTime[] = { 3, 4, 5, 6 };
+		int profit[] = { 20, 20, 100, 70, 60 };
+		jobScheduling(startTime,endTime,profit,profitAns)
+	}
+}

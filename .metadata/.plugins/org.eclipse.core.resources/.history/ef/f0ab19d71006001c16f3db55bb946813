@@ -1,0 +1,17 @@
+package String;
+
+import java.util.Scanner;
+
+public class UncommonWords {
+	public static void main(String[] args) {
+		Scanner scr = new Scanner(System.in);
+		String s1 = scr.nextLine();
+		String s2 = scr.nextLine();
+		String[] a1 = s1.split(" ");
+		String[] a2 = s2.split("");
+		int i = 0, j = 0;
+		for (; i < a1.length && j < a2.length; i++, j++) {
+			if(a1[i])
+		}
+	}
+}

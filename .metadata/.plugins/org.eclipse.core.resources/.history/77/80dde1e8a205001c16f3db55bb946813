@@ -1,0 +1,7 @@
+package String;
+
+public class LongestCommanPrefix {
+	public static void main(String[] args) {
+
+	}
+}

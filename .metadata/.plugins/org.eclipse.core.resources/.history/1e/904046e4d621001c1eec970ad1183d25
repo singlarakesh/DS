@@ -1,0 +1,11 @@
+package Java8;
+
+public class OptionalClass {
+	public static void main(String[] args) {
+      //Without using Optional Class
+		
+		String str[]=new String[10];
+		String word=str[5].toUpperCase();
+		System.out.println(word);
+	}
+}

@@ -1,0 +1,11 @@
+package Amazon;
+
+public class MaximumProductSubarray {
+	public static void main(String[] args) {
+
+	}
+
+	public static int maxProduct(int[] nums) {
+
+	}
+}

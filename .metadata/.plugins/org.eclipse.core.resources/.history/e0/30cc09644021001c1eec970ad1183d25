@@ -1,0 +1,10 @@
+package Java8;
+
+public class ClientClass implements Vehicals {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+     Vehicals v=()=>{System.out.println("Hello");};
+	}
+
+}

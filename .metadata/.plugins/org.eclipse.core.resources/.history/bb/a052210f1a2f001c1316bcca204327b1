@@ -1,0 +1,33 @@
+package LeetCode;
+
+public class FindSecondLargestEle {
+	public static void main(String[] args) {
+		int arr[] = { 12, 35, 1, 12, 34, 1 };
+		findSecondLargest(arr);
+	}
+
+	private static void findSecondLargest(int[] arr) {
+		// TODO Auto-generated method stub
+		int first, second;
+		if (arr[0] > arr[1]) {
+			first = arr[0];
+			second = arr[1];
+		} else {
+			first = arr[1];
+			second = arr[0];
+		}
+		int i = 2;
+		while (i < arr.length) {
+			if (arr[i] > second) {
+				if (arr[i] > first) {
+					second = first;
+					first = arr[i];
+				} else {
+					second=arr[i];
+				}
+			}
+			i++;
+		}
+		System.out.println(second);
+	}
+}

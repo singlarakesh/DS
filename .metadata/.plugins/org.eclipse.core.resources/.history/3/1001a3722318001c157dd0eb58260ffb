@@ -1,0 +1,47 @@
+package LinkedList;
+
+
+public class PracticeLL {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public static class LL_List {
+		private class Node {
+			int data;
+			Node next;
+		}
+
+		private Node head;
+		private Node tail;
+		private int size;
+		public void addFirst(int data) {
+			Node nn=new Node();
+			nn.data=data;
+			nn.next=null;
+			if(size==0) {
+				this.head=nn;
+				this.tail=nn;
+			}else {
+				nn.next=head;
+				head=nn;
+			}
+			size++;
+		}
+		public void addLast(int data) {
+			Node nn=new Node();
+			nn.data=data;
+			nn.next=null;
+			if(size==0) {
+				this.head=nn;
+				this.tail=nn;
+			}else {
+				tail.next=nn;
+				tail=nn;
+			}
+			size++;
+		}
+	}
+}

@@ -1,0 +1,12 @@
+package Amazon;
+class Interval{
+	int start,end;
+	Interval(int start,int end){
+		this.start=start;
+		this.end=end;
+	}
+}
+public class MergeIntervals {
+	public static void main(String[] args) {
+	}
+}

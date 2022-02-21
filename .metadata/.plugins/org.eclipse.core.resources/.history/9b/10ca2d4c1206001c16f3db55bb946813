@@ -1,0 +1,36 @@
+package String;
+
+import java.util.Scanner;
+
+public class UncommonWords {
+	public static void main(String[] args) {
+		Scanner scr = new Scanner(System.in);
+		String s1 = scr.nextLine();
+		String s2 = scr.nextLine();
+		String[] a1 = s1.split(" ");
+		String[] a2 = s2.split(" ");
+		int minLen = a1.length > a2.length ? a2.length : a1.length;
+		String[] ans = new String[minLen];
+		int i = 0, j = 0;
+		for (; i < a1.length && j < a2.length;) {
+			if (a1[i].compareTo(a2[j]) == 0) {
+				i++;
+				j++;
+			} else {
+				break;
+			}
+		}
+		int k = 0;
+		while (i < a1.length && j < a2.length) {
+			if (i == 0 && j == 0) {
+
+				ans = a1.length > a2.length ? a2 : a1;
+			} else {
+				ans[k] = a1[i];
+				ans[k + 1] = a2[j];
+				k += 2;
+			}
+		}
+
+	}
+}

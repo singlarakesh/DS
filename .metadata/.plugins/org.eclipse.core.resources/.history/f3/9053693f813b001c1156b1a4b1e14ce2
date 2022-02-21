@@ -1,0 +1,7 @@
+package Amazon;
+
+public class Top_K_Freq_El {
+	public static void main(String[] args) {
+
+	}
+}

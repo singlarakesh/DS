@@ -1,0 +1,5 @@
+package dp;
+
+public interface hello {
+   public static final int hss=10;
+}

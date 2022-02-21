@@ -1,0 +1,38 @@
+package Sorting;
+
+public class MergeSort {
+	public static void main(String[] args) {
+		int arr[] = { 64, 34, 25, 12, 22, 11, 90 };
+		mergeSort(arr, 0, arr.length);
+		for (int i : arr)
+			System.out.println(i);
+	}
+
+	private static void mergeSort(int[] arr, int i, int j) {
+		// TODO Auto-generated method stub
+		if (i < j) {
+			int mid = i + (j - i) / 2;
+			mergeSort(arr, i, mid);
+			mergeSort(arr, mid + 1, j);
+			mergeArray(arr, i, mid, j);
+		}
+	}
+
+	private static void mergeArray(int[] arr, int i, int mid, int j) {
+		// TODO Auto-generated method stub
+		int a[] = new int[mid - i + 1];
+		int b[] = new int[j - mid];
+		for (int l = 0; l < a.length; l++) {
+			a[l]=arr[i+l];
+		}
+		for (int l = 0; l < b.length; l++) {
+			b[l]=arr[mid+l+1];
+		}
+		int x=0;
+		int y=0;
+		int h=i;
+		while(x<a.length && y<b.length) {
+			  
+		}
+	}
+}

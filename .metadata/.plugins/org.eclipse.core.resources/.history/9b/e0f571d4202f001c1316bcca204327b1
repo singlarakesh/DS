@@ -1,0 +1,26 @@
+package LeetCode;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+
+public class ClosestPointToOrigin {
+	public static void main(String[] args) {
+		int ar[][] = { { 1, 3 }, { -2, 2 } };
+		HashMap<Integer, List<Integer>> map=new HashMap<Integer, List<Integer>>();
+		int p[] = new int[ar.length];
+		for (int l = 0; l < ar.length; l++) {
+			List<Integer> s=new ArrayList<Integer>();
+			int i = ar[l][0];
+			int j = ar[l][1];
+			int s = i * i + j * j;
+			p[l]=s;
+			
+			map.put(s, ar[l]);
+		}
+		Arrays.sort(p);
+		int 
+		while()
+	}
+}

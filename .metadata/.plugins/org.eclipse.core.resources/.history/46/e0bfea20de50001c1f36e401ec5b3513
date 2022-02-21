@@ -1,0 +1,21 @@
+package com.example.demo;
+
+@Configuration
+@EnableElasticsearchRepositories(basePackages 
+        = "io.pratik.elasticsearch.repositories")
+@ComponentScan(basePackages = { "io.pratik.elasticsearch" })
+public class ElasticsearchClientConfig extends 
+         AbstractElasticsearchConfiguration {
+  @Override
+  @Bean
+  public RestHighLevelClient elasticsearchClient() {
+
+  final ClientConfiguration clientConfiguration = 
+    ClientConfiguration
+      .builder()
+      .connectedTo("localhost:9200")
+      .build();
+
+  return RestClients.create(clientConfiguration).rest();
+  }
+}

@@ -1,0 +1,59 @@
+import java.util.ArrayList;
+import java.util.Deque;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.PriorityQueue;
+import java.util.Queue;
+
+class Point {
+	int val;
+	int x;
+	int y;
+
+	public Point(int val, int x, int y) {
+		super();
+		this.val = val;
+		this.x = x;
+		this.y = y;
+	}
+}
+
+public class Verticle {
+	private static void verticleView(TNode root) {
+		// TODO Auto-generated method stub
+		Queue<Point> q = new LinkedList<Point>();
+		List<List<Integer>> res = new ArrayList<List<Integer>>();
+		Map<Integer, PriorityQueue<Point>> map = new HashMap<Integer, PriorityQueue<Point>>();
+		q.addLast(new VPair(root, 0));
+		int max1 = 0;
+		int min1 = 0;
+		while (!q.isEmpty()) {
+			int size = q.size();
+			while (size-- > 0) {
+				VPair rp = q.removeFirst();
+				map.putIfAbsent(rp.h, new ArrayList<>());
+				map.get(rp.h).add(rp.node.val);
+
+				if (rp.node.left != null) {
+					q.addLast(new VPair(rp.node.left, rp.h - 1));
+				}
+				if (rp.node.right != null) {
+					q.addLast(new VPair(rp.node.right, rp.h + 1));
+				}
+				max1 = Math.max(max1, rp.h);
+				min1 = Math.min(min1, rp.h);
+			}
+		}
+
+		for (int i = min1; i <= 0; i++) {
+			res.add(map.get(i));
+		}
+		for (int i = 1; i <= max1; i++) {
+			res.add(map.get(i));
+		}
+		System.out.println(res);
+	}
+
+}

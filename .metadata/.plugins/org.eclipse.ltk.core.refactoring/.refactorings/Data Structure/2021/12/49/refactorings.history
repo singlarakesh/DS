@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;dp.A&apos; to &apos;nums&apos;&#x0D;&#x0A;- Original project: &apos;Data Structure&apos;&#x0D;&#x0A;- Original element: &apos;dp.A&apos;&#x0D;&#x0A;- Renamed element: &apos;dp.nums&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;A&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;dp{A.java[A" matchStrategy="1" name="nums" qualified="false" references="true" similarDeclarations="false" stamp="1638509524129" textual="false" version="1.0"/>
+</session>

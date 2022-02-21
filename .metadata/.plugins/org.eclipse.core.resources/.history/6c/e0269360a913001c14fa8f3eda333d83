@@ -1,0 +1,204 @@
+package LinkedList;
+
+import java.util.Scanner;
+
+public class LLImplementation {
+	public static void main(String[] args) throws Exception {
+		Scanner scr = new Scanner(System.in);
+		int n = scr.nextInt();
+		int tc = scr.nextInt();
+		linked_list s = new linked_list();
+		for (int j = 0; j < n; j++) {
+			int num = scr.nextInt();
+			s.addLast(num);
+		}
+
+		for (int i = 0; i < tc; i++) {
+			int m = scr.nextInt();
+		
+				int item = s.removeat(m);
+				s.dislay();
+		
+
+		}
+
+	}
+
+	public static class linked_list {
+		private static class node {
+			int data;
+			node next;
+		}
+
+		private node head;
+		private node tail;
+		private int size;
+
+		public int findmid() {
+			node counter = head;
+			node temp = head;
+			while (counter.next != null && counter.next.next != null) {
+				counter = counter.next.next;
+				temp = temp.next;
+
+			}
+			return temp.data;
+
+		}
+
+		public int getFirst() throws Exception {
+			if (size == 0) {
+				throw new Exception("NULL LINKED LIST");
+			}
+			return head.data;
+		}
+
+		public int getLast() throws Exception {
+			if (size == 0) {
+				throw new Exception("NULL LINKED LIST");
+			}
+			return tail.data;
+		}
+
+		public int getAt(int indx) throws Exception {
+			if (size == 0 || indx > size) {
+				throw new Exception("NULL LINKED LIST");
+			}
+			node temp = head;
+			for (int i = 0; i < indx; i++) {
+				temp = temp.next;
+			}
+			return temp.data;
+
+		}
+
+		public void addLast(int item) {
+			// new node
+			node nn = new node();
+			nn.data = item;
+			nn.next = null;
+			// attach
+			if (size == 0) {
+				head = nn;
+				tail = nn;
+				tail.next = null;
+				size++;
+			} else {
+				tail.next = nn;
+				tail = nn;
+				size++;
+			}
+			// summary update
+
+		}
+
+		public void addfirst(int item) {
+			node n = new node();
+			n.data = item;
+			if (size == 0) {
+				n.next = null;
+				head = n;
+				tail = n;
+				size++;
+			} else {
+				n.next = head;
+				head = n;
+				size++;
+			}
+
+		}
+
+		private node getnodeat(int indx) throws Exception {
+			if (size == 0 || indx > size) {
+				throw new Exception("NULL LINKED LIST");
+			}
+			node temp = head;
+			for (int i = 0; i < indx; i++) {
+				temp = temp.next;
+			}
+			return temp;
+		}
+
+		public void addat(int item, int indx) throws Exception {
+			if (indx == 0) {
+				 addfirst(item);
+			}
+			else if (indx == size - 1) {
+				addLast(item);
+			}
+			else if (indx > size) {
+				throw new Exception("out of range");
+			} else {
+				node n = new node();
+				n.data = item;
+
+				node nm1 = getnodeat(indx - 1);
+				node nm2 = nm1.next;
+
+				nm1.next = n;
+				n.next = nm2;
+				size++;
+			}
+		}
+
+		public int removelast() throws Exception {
+			if (size == 0) {
+				throw new Exception("linked list is empty");
+			}
+			int t = tail.data;
+			if (size == 1) {
+				head = null;
+				tail = null;
+				size--;
+			} else {
+				node m = getnodeat(size - 2);
+				m.next = null;
+				this.tail = m;
+				size--;
+			}
+			return t;
+		}
+
+		public int removefirst() throws Exception {
+			if (size == 0) {
+				throw new Exception("linked list is empty");
+			}
+			int t = head.data;
+			if (size == 1) {
+				head = null;
+				tail = null;
+				size--;
+			} else {
+				head = head.next;
+				size--;
+			}
+			return t;
+		}
+
+		public int removeat(int indx) throws Exception {
+			if (indx == 0) {
+				return removefirst();
+				
+			}
+			if (indx == size - 1) {
+				return removelast();
+			}
+			node nm1 = getnodeat(indx - 1);
+			node np1 = getnodeat(indx);
+			int val = np1.data;
+			nm1.next = np1.next;
+			np1.next = null;
+			size--;
+			return val;
+		}
+
+		public void dislay() {
+			node temp = head;
+			while (temp != null) {
+				System.out.print(temp.data + " ");
+				temp = temp.next;
+			}
+		}
+
+	}
+}

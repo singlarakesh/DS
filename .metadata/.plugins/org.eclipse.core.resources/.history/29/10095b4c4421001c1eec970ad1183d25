@@ -1,0 +1,12 @@
+package Java8;
+
+public class ClientClass {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+//using lambda ini F.I
+	    Vehicals v=()-> System.out.println("Hello");
+	    v.typeOfVehical();
+	}
+
+}

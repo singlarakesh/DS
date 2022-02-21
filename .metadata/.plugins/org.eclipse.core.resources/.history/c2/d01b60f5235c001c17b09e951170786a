@@ -1,0 +1,4 @@
+aws.es.endpoint:https://search-product-es-u4jrwstj4ev36wkjhbmhlv6odm.ap-south-1.es.amazonaws.com	
+aws.es.accessKey:AKIAQ45S57MVUJGNZFX6
+aws.es.secretKey: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
+aws.es.region:ap-south-1

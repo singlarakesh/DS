@@ -1,0 +1,7 @@
+package com.LLD.Elevator;
+
+public class Elevator {
+	private int currentFloor = 0;
+	private Direction direction = Direction.UP;
+	private Status status = Status.IDLE;
+}

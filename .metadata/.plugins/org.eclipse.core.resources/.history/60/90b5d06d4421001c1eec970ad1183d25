@@ -1,0 +1,17 @@
+package Java8;
+
+import java.util.function.Predicate;
+
+public class ClientClass {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+//using lambda ini F.I
+	    Vehicals v=()-> System.out.println("Hello");
+	    v.typeOfVehical();
+//Predicate FI defined by java in util package
+	    Predicate<Integer> p=i->i<10;
+	    System.out.println(p.test(9));
+	}
+
+}

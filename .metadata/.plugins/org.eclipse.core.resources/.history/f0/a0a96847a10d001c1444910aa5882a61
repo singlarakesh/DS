@@ -1,0 +1,21 @@
+package HacherBlocks;
+
+import java.util.Scanner;
+
+public class MinJumpsNeeded {
+	public static void main(String[] args) {
+		Scanner scr = new Scanner(System.in);
+		int tc = scr.nextInt();
+		for (int i = 0; i < tc; i++) {
+			int n = scr.nextInt();
+			int a[] = new int[n];
+			minJumpsReq(a, n);
+		}
+	}
+
+	private static void minJumpsReq(int[] a, int n) {
+		// TODO Auto-generated method stub
+		int dp[] = new int[n];
+
+	}
+}

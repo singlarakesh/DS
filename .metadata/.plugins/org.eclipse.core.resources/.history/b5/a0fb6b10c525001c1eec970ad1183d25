@@ -1,0 +1,13 @@
+import java.util.Scanner;
+
+public class AtoB {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+       Scanner scr=new Scanner(System.in);
+       String a=scr.next();
+       String b=scr.next();
+       System.out.println(a+""+b);
+	}
+
+}

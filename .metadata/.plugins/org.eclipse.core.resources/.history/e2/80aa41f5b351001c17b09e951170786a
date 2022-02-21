@@ -1,0 +1,30 @@
+package Graph;
+
+import java.util.Queue;
+
+class Pair {
+}
+
+public class RottenOranges {
+	public static void main(String[] args) {
+		int[][] grid = { { 0, 1, 2 }, { 0, 1, 2 }, { 2, 1, 1 } };
+		orangesRotting(grid);
+	}
+
+	public static int orangesRotting(int[][] grid) {
+		int visited[][] = new int[grid.length][grid[0].length];
+		for (int i = 0; i < grid.length; i++) {
+			for (int j = 0; j < grid[0].length; j++) {
+				if (grid[i][j] == 2) {
+					makeYourNghrRotten(i, j, grid, visited);
+				}
+			}
+		}
+		return 0;
+	}
+
+	private static void makeYourNghrRotten(int i, int j, int[][] grid, int[][] visited) {
+		// TODO Auto-generated method stub
+		Queue<Integer>
+	}
+}

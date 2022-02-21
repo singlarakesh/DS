@@ -1,0 +1,31 @@
+package Graph;
+
+import java.util.Scanner;
+
+public class NqueenPlb {
+	public static void main(String[] args) {
+		Scanner scr = new Scanner(System.in);
+		int n = scr.nextInt();
+		int board[][] = new int[n][n];
+		nQueenPlb(board, 0, n);
+	}
+
+	private static void nQueenPlb(int[][] board, int row, int n) {
+		// TODO Auto-generated method stub
+
+		for (int col = 0; col < n; col++) {
+			if (isSafe(board, row, col)) {
+				board[row][col] = 1;
+				if(nQueenPlb(board, row+1, n)) {
+					return true;
+				}
+			}
+		}
+
+	}
+
+	private static boolean isSafe(int[][] board, int row, int col) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+}

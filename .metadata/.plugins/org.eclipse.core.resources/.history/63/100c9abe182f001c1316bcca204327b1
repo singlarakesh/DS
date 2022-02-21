@@ -1,0 +1,13 @@
+package LeetCode;
+
+public class FindSecondLargestEle {
+	public static void main(String[] args) {
+		int arr[] = { 12, 35, 1, 10, 34, 1 };
+		findSecondLargest(arr);
+	}
+
+	private static void findSecondLargest(int[] arr) {
+		// TODO Auto-generated method stub
+		
+	}
+}

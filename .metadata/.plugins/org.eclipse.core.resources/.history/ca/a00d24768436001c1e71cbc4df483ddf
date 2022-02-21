@@ -1,0 +1,26 @@
+package dp;
+
+public class CoinChange {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int coin[] = { 1, 2, 5 };
+		int amt = 11;
+		System.out.println(minCoinNeeded(coin, 0, amt));
+		;
+	}
+
+	public static int minCoinNeeded(int coin[], int i, int amt) {
+		if (amt == 0)
+			return 1;
+		if (amt < 0||i>=coin.length)
+			return Integer.MAX_VALUE;
+		int inc = minCoinNeeded(coin, i, amt - coin[i]);
+		if(inc==1) {
+			inc+=1;
+		}
+		int exc = minCoinNeeded(coin, i + 1, amt);
+		return Math.min(inc, exc);
+	}
+
+}

@@ -1,0 +1,6 @@
+package com.LLD.Elevator;
+
+public class Elevator {
+  int currentFloor=0;
+  ElevatorStatus status=ElevatorStatus.UP;
+}

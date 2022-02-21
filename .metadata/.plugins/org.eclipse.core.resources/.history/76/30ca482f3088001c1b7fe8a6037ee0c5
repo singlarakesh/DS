@@ -1,0 +1,22 @@
+package com.LLD.Elevator;
+
+import java.util.TreeSet;
+
+public class Elevator {
+	private int currentFloor = 0;
+	private Direction direction = Direction.UP;
+	private Status status = Status.IDLE;
+
+	private TreeSet<Request> currentJobs = new TreeSet<>();
+
+	private TreeSet<Request> upPendingJobs = new TreeSet<Request>();
+
+	private TreeSet<Request> downPendingJobs = new TreeSet<Request>();
+
+	public void startElevator() {
+		while(true) {
+			
+		}	
+	}
+
+}

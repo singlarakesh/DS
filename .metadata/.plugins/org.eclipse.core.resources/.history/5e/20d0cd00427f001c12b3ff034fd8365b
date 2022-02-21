@@ -1,0 +1,32 @@
+package Graph;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Scanner;
+
+public class AdjancyList {
+//	public static void main(String[] args) {
+//		List<ArrayList<Integer>> adj = new ArrayList<ArrayList<Integer>>();
+//		Scanner scr=new Scanner(System.in);
+//		int u=scr.nextInt();
+//		int v=scr.nextInt();
+//		
+//			adj.get(u).add(v);
+//	}
+	int v;
+	LinkedList<Integer> adj[];
+
+	public AdjancyList(int v) {
+		// TODO Auto-generated constructor stub
+		this.v = v;
+		this.adj = new LinkedList[v];
+		for (int i = 0; i < v; i++) {
+			adj[i] = new LinkedList<Integer>();
+		}
+	}
+
+	public static void main(String[] args) {
+		AdjancyList ad = new AdjancyList(5);
+	}
+}

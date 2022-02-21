@@ -1,0 +1,85 @@
+class Node {
+	int data;
+	Node left;
+	Node right;
+
+	public Node(int data) {
+		this.data = data;
+		left = right = null;
+	}
+}
+
+public class BTTODLL {
+	Node head;
+	Node prev;
+	Node root;
+
+	public static void main(String[] args) {
+		// Let us create the tree as shown in above diagram
+		BTTODLL tree = new BTTODLL();
+		tree.root = new Node(10);
+		tree.root.left = new Node(12);
+		tree.root.right = new Node(15);
+		tree.root.left.left = new Node(25);
+		tree.root.left.left.right = new Node(3);
+		tree.root.left.right = new Node(30);
+		tree.root.right.left = new Node(36);
+
+		// convert to DLL
+//		tree.BinaryTree2DoubleLinkedList(tree.root);
+//		tree.printList(tree.head);
+		tree.printBoundary(tree.root);
+	}
+
+	private void printBoundary(Node root) {
+		// TODO Auto-generated method stub
+		System.out.println(root.data);
+		printBoundaryLeft(root);
+		printBoundaryRight(root);
+		
+	}
+
+	private void printBoundaryLeft(Node root) {
+		// TODO Auto-generated method stub
+		if (root.left != null) {
+			System.out.println(root.left.data);
+			printBoundaryLeft(root.left);
+		} else if (root.right != null) {
+			System.out.println(root.right.data);
+			printBoundaryLeft(root.right);
+		}
+
+	}
+	private void printBoundaryRight(Node root) {
+		// TODO Auto-generated method stub
+		if (root.right != null) {
+			System.out.println(root.right.data);
+			printBoundaryRight(root.right);
+		} else if (root.left != null) {
+			System.out.println(root.left.data);
+			printBoundaryRight(root.left);
+		}
+
+	}
+	private void BinaryTree2DoubleLinkedList(Node root) {
+		// TODO Auto-generated method stub
+		if (root == null)
+			return;
+		BinaryTree2DoubleLinkedList(root.left);
+		if (prev == null)
+			head = root;
+		else {
+			root.left = prev;
+			prev.right = root;
+		}
+		prev = root;
+		BinaryTree2DoubleLinkedList(root.right);
+	}
+
+	void printList(Node node) {
+		while (node != null) {
+			System.out.print(node.data + " ");
+			node = node.right;
+		}
+	}
+}

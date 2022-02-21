@@ -1,0 +1,13 @@
+package LeetCode;
+
+public class Jump_Game_3_1306 {
+	public static void main(String[] args) {
+		int arr[] = { 4, 2, 3, 0, 3, 1, 2 };
+		int start = 5;
+		canReach(arr, start);
+	}
+
+	public static boolean canReach(int[] arr, int start) {
+
+	}
+}

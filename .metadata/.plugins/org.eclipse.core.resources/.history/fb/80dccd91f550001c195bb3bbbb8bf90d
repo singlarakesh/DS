@@ -1,0 +1,9 @@
+package com.example.demo.Repository;
+
+import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
+
+import com.example.demo.model.Product;
+
+public interface ProductRepository extends ElasticsearchRepository<Product, String> {
+
+}

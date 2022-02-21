@@ -1,0 +1,19 @@
+
+public class ProductOfMaxOfAllSubset {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int ar[] = { 1, 2, 3 };
+		int product = 1;
+		for (int i = 0; i < ar.length; i++) {
+			int j = i + 1;
+			int temp=1;
+			while (j > 0) {
+				product = product * ar[i];
+				j--;
+			}
+		}
+		System.out.println(product);
+	}
+
+}

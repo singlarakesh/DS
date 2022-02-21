@@ -1,0 +1,7 @@
+package Amazon;
+
+public class kClosest {
+	public static void main(String[] args) {
+
+	}
+}

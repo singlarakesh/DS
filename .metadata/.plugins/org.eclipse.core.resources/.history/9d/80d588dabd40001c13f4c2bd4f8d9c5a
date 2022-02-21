@@ -1,0 +1,26 @@
+package Graph;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
+
+public class KeysAndRooms {
+	public static void main(String[] args) {
+     List<List<Integer>> list=new ArrayList<List<Integer>>();
+//     List<Integer> l=new ArrayList<Integer>();
+//     l.add(1);
+//     
+//     list.add(l);
+	}
+    public boolean canVisitAllRooms(List<List<Integer>> rooms) {
+    	int v=rooms.size();
+    	boolean visited[]=new boolean[v];
+    	Queue<Integer> q=new LinkedList<>();
+    	q.add(0);
+    	for(int i:rooms.get(0)) {
+    		
+    	}
+		return false;      
+    }
+}

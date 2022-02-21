@@ -1,0 +1,123 @@
+package LinkedList;
+
+import java.util.Scanner;
+
+
+public class PracticeLL {
+
+	public static void main(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+		Scanner scr = new Scanner(System.in);
+		LL_List s = new LL_List();
+		int n = scr.nextInt();
+		int k = scr.nextInt();
+		for (int i = 0; i < n; i++) {
+			int num = scr.nextInt();
+			s.addLast(num);
+		}
+		kthreverse(s, k);
+		s.display();
+	}
+
+
+
+	private static void kthreverse(LL_List s, int k) throws Exception {
+		// TODO Auto-generated method stub
+		LL_List prev = null;
+		LL_List curr = null;
+		while(s.size!=0) {
+			curr=new LL_List();
+			int i=0;
+			while(i<k && s.size!=0) {
+				curr.addFirst(s.removeFirst());
+				i++;
+			}
+			if(prev==null) {
+				prev=curr;			
+			}else {
+				prev.tail.next=curr.head;
+				prev.tail=curr.tail;
+				prev.size+=curr.size;
+			}
+	
+		}
+		s.head=prev.head;
+		s.tail=prev.tail;
+		s.size=prev.size;
+	}
+
+
+
+	public static class LL_List {
+		private class Node {
+			int data;
+			Node next;
+		}
+
+		private Node head;
+		private Node tail;
+		private int size;
+
+		public void addFirst(int data) {
+			Node nn = new Node();
+			nn.data = data;
+			nn.next = null;
+			if (size == 0) {
+				this.head = nn;
+				this.tail = nn;
+			} else {
+				nn.next = head;
+				head = nn;
+			}
+			size++;
+		}
+
+		public void addLast(int data) {
+			Node nn = new Node();
+			nn.data = data;
+			nn.next = null;
+			if (size == 0) {
+				this.head = nn;
+				this.tail = nn;
+			} else {
+				tail.next = nn;
+				tail = nn;
+			}
+			size++;
+		}
+
+		public int removeFirst() throws Exception {
+			if (size == 0) {
+				throw new Exception("linked list is empty");
+			}
+			int t = head.data;
+			if (size == 1) {
+				head = null;
+				tail = null;
+				size--;
+			} else {
+				head = head.next;
+				size--;
+			}
+			return t;
+
+		}
+
+//		public void removeLast() {
+//			Node nn=getNodeAt(size-1);
+//			nn.next=null;
+//			tail=nn;
+//		}
+//		private Node getNodeAt(int i) {
+//			// TODO Auto-generated method stub
+//			return null;
+//		}
+		public void display() {
+			Node temp = head;
+			while (temp != null) {
+				System.out.print(temp.data+" ");
+				temp = temp.next;
+			}
+		}
+	}
+}

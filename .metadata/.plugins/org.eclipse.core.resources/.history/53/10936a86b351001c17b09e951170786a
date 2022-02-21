@@ -1,0 +1,13 @@
+package Graph;
+
+public class RottenOranges {
+	public static void main(String[] args) {
+		int[][] grid = { { 0, 1, 2 }, { 0, 1, 2 }, { 2, 1, 1 } };
+		orangesRotting(grid);
+	}
+
+	public static int orangesRotting(int[][] grid) {
+		return 0;
+		// Code here
+	}
+}

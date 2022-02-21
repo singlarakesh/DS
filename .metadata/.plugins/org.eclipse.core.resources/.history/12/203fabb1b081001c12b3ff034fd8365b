@@ -1,0 +1,10 @@
+package Graph;
+
+public class DJSet {
+    public int[] upper;
+
+    public DJSet(int n) {
+        upper = new int[n];
+        Arrays.fill(upper, -1);
+    }
+}

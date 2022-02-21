@@ -1,0 +1,30 @@
+package LeetCode;
+
+import java.util.Arrays;
+
+public class Most_Profit_Assigning_Work_826 {
+	public static void main(String[] args) {
+	}
+
+	public int maxProfitAssignment(int[] difficulty, int[] profit, int[] worker) {
+		Arrays.sort(worker);
+        int maxprofit=0;
+		for (int i = 0; i < worker.length; i++) {
+			int l = 0;
+			int r = difficulty.length;
+			int prof=0;
+			while (l < r) {
+				int mid = (l + r) / 2;
+				if(difficulty[mid]==worker[i]) {
+					prof=profit[l];
+				}else if(difficulty[mid]<worker[i]) {
+					prof=profit[l];
+					l=mid+1;
+				}else {
+					r=mid-1;
+				}
+			}
+		}
+		return maxprofit;
+	}
+}

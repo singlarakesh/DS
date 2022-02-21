@@ -1,0 +1,7 @@
+package Graph;
+
+import java.util.List;
+
+public class MyGraph {
+   private List<Integer> adj[];
+}

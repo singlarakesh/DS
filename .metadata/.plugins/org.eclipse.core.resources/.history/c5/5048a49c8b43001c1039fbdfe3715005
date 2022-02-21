@@ -1,0 +1,12 @@
+package Graph;
+
+public class CheapestFair {
+	public static void main(String[] args) {
+		int[][] flights = { { 0, 1, 100 }, { 1, 2, 100 }, { 0, 2, 500 } };
+		findCheapestPrice
+	}
+
+	public static int findCheapestPrice(int n, int[][] flights, int src, int dst, int k) {
+
+	}
+}

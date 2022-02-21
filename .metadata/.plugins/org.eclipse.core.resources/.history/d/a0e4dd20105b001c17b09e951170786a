@@ -1,0 +1,33 @@
+package Caching;
+
+import java.util.HashMap;
+
+public class Cache<K, V> {
+	private HashMap<K, V> map;
+	private CacheItem first, last;
+	private int size;
+	private final int CAPACITY;
+
+	private int hitCount = 0;
+	private int missCount = 0;
+
+	public Cache(int capacity) {
+		this.CAPACITY = capacity;
+		map = new HashMap<>(CAPACITY);
+	}
+
+	public void put(K key, V value) {
+	}
+
+	public void get() {
+
+	}
+	public void delete(K key) {
+		deleteNode(key);
+	}
+
+	private void deleteNode(K key) {
+		// TODO Auto-generated method stub
+		
+	}
+}

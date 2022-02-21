@@ -1,0 +1,7 @@
+package LeetCode;
+
+public class InsertionSortList {
+	public static void main(String[] args) {
+		int ar[] = { 4, 2, 1, 3 };
+	}
+}

@@ -1,0 +1,14 @@
+package dp;
+
+public class CoinChange {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int coin[] = { 1, 2, 5 };
+		int amt = 11;
+	}
+
+	public static void minCoinNeeded() {
+	}
+
+}

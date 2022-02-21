@@ -1,0 +1,10 @@
+package Pubmatic;
+
+import java.util.LinkedList;
+
+public class Consumer {
+	private LinkedList<String> buffer;
+	public Consumer(LinkedList<String> buffer){
+		this.buffer=buffer;
+	}
+}

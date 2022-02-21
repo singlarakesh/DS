@@ -1,0 +1,25 @@
+
+public class Tree {
+	private TreeNode root;
+
+	public void intsert(int val) {
+		if (root == null) {
+			root = new TreeNode(val);
+		} else {
+			root.insert(val);
+		}
+	}
+
+	public static void main(String[] args) {
+		Tree tree = new Tree();
+		tree.intsert(25);
+		tree.intsert(20);
+		tree.intsert(15);
+		tree.intsert(27);
+		tree.intsert(25);
+		tree.intsert(25);
+		tree.intsert(25);
+		tree.intsert(25);
+		tree.intsert(25);
+	}
+}

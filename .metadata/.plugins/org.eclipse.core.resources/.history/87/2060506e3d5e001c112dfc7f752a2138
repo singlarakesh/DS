@@ -1,0 +1,6 @@
+
+public class LocalMaxMin {
+	public static void main(String[] args) {
+		int ar[] = { 100, 180, 260, 310, 40, 535, 695 };
+	}
+}

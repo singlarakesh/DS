@@ -1,0 +1,30 @@
+package Amazon;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
+
+class Interval{
+	int start,end;
+	Interval(int start,int end){
+		this.start=start;
+		this.end=end;
+	}
+}
+public class MergeIntervals {
+	public static void main(String[] args) {
+		Interval ar[]=new Interval[4];
+		ar[0]=new Interval(6, 8);
+		ar[1]=new Interval(1, 9);
+		ar[2]=new Interval(2, 4);
+		ar[3]=new Interval(4, 7);
+		MergeIntervals(ar);
+	}
+
+	private static void MergeIntervals(Interval[] ar) {
+		// TODO Auto-generated method stub
+		Comparator<Interval> compare=(a,b)->a.start-b.start;
+		Arrays.sort(ar, compare);
+		System.out.println(ar);
+	}
+}

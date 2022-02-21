@@ -1,0 +1,13 @@
+package dp;
+
+public class LCS {
+	public static void main(String[] args) {
+		String text1 = "abcde", text2 = "ace" ;
+		lcs(text1,text2,0,0);
+	}
+
+	private static void lcs(String text1, String text2,int i,int j) {
+		
+		
+	}
+}

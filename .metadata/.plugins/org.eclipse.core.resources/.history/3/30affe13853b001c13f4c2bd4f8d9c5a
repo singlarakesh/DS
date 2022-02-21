@@ -1,0 +1,33 @@
+package Amazon;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.PriorityQueue;
+import java.util.Queue;
+
+public class Top_K_Freq_El {
+	public static void main(String[] args) {
+		int nums[] = { 1, 1, 1, 2, 2, 3 };
+		int k = 2;
+		Map<Integer, Integer> map = new HashMap<>();
+		for (int num : nums) {
+			if (map.containsKey(num)) {			
+				map.put(num, map.get(num)+1);
+			} else {
+				map.put(num, 1);
+			}
+		}
+		Queue<Integer> q=new PriorityQueue<>();
+		for(int i:map.keySet()) {
+			
+		}
+		
+		
+		
+//		List<int[]> num=Arrays.asList(nums);
+//		System.out.println(num);
+	}
+}

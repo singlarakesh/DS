@@ -1,0 +1,7 @@
+package LeetCode;
+
+public class Jump_Game_3_1306 {
+	public static void main(String[] args) {
+
+	}
+}

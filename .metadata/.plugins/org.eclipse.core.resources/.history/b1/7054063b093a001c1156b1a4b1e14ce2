@@ -1,0 +1,22 @@
+package Amazon;
+
+class Node {
+	int dist;
+	int []pt;
+}
+
+public class kClosest {
+	public static void main(String[] args) {
+		int[][] ar = { { 1, 3 }, { -2, 2 } };
+		kclosest(ar);
+	}
+
+	private static void kclosest(int[][] ar) {
+		// TODO Auto-generated method stub
+		for (int l = 0; l < ar.length; l++) {
+			int i = ar[l][0];
+			int j = ar[l][1];
+			int s = i * i + j * j;
+		}
+	}
+}

@@ -1,0 +1,26 @@
+package Graph;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class implementation {
+  static class Edge{
+	  int src;
+	  int dest;
+	  int wt;
+	public Edge(int src, int dest, int wt) {
+		super();
+		this.src = src;
+		this.dest = dest;
+		this.wt = wt;
+	}
+	  
+  }
+  public static void main(String[] args) {
+	  int vtc=7;
+	  ArrayList<Edge>[] graph=new ArrayList<Edge>[vtc];
+	  for(int i=0;i<7;i++) {
+		  graph[i]=new ArrayList<Edge>();
+	  }
+  }
+}

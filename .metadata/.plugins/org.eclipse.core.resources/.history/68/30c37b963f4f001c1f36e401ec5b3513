@@ -1,0 +1,18 @@
+class A {
+	void print() {
+		System.out.println("in A");
+	}
+}
+
+class B extends A {
+	void print() {
+		System.out.println("in B");
+	}
+}
+
+public class datatype {
+	public static void main(String[] args) {
+		A ref = new B();
+		System.out.println(ref.print());
+	}
+}
