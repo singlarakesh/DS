@@ -75,7 +75,22 @@ public class BTLTraversal {
 //		System.out.println(leftView(root));
 //		zigzag(root);
 //		PopulatingNextPointer(root);
-		prinAllNodeAtK(root,2);
+//		prinAllNodeAtK(root, 2);
+		widthOfBinaryTre(root);
+		
+		System.out.println(maxi);
+//		return max;
+	}
+	static int maxi=Integer.MIN_VALUE;
+
+	public static int widthOfBinaryTre(TNode root) {
+		if (root == null) {
+			return 0;
+		}
+		int lh = widthOfBinaryTre(root.left);
+		int rh = widthOfBinaryTre(root.right);
+		maxi = Math.max(maxi, lh + rh);
+		return Math.max(lh, rh) + 1;
 	}
 
 //	private static void verticleView(TNode root, int v, Map<Integer, List<Integer>> map) {
@@ -104,7 +119,7 @@ public class BTLTraversal {
 
 	private static int prinAllNodeAtK(TNode root, int k) {
 		// TODO Auto-generated method stub
-		if(root==null) {
+		if (root == null) {
 			return k;
 		}
 		prinAllNodeAtK(root.left, k);
@@ -123,7 +138,7 @@ public class BTLTraversal {
 				if (!q.isEmpty()) {
 					node.next = q.peek();
 				} else {
-					node.next=null;
+					node.next = null;
 				}
 				System.out.print(node.next);
 				if (node.left != null)

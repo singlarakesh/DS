@@ -1,7 +1,0 @@
-package Pubmatic;
-
-import java.util.LinkedList;
-
-public class Consumer {
-	LinkedList<Integer> buffer;
-}
